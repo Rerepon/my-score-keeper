@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卓球得点表</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .card {
+            margin-top: 20px;
+        }
+        .card-image img {
+            object-fit: cover;
+        }
+        .title, .subtitle {
+            text-align: center;
+        }
+        .card-footer {
+            flex-wrap: wrap;
+        }
+        .card-footer .button {
+            flex: 1 1 auto;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-mobile is-centered">
+                <div class="column is-three-quarters-mobile is-half-tablet">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://x.gd/NLldh" alt="卓球画像">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title">卓球得点表</p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="field">
+                                    <label class="label">プレイヤー1の名前</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="p1Name" placeholder="プレイヤー1">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">プレイヤー2の名前</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="p2Name" placeholder="プレイヤー2">
+                                    </div>
+                                </div>
+                                <h1 class="title is-2"><span id="p1Display">0</span> 対 <span id="p2Display">0</span></h1>
+                                <p class="subtitle">下のボタンを押して得点を管理しよう</p>
+                                <label for="winningScore" class="label is-large is-inline">何点先取？</label>
+                                <div class="select is-rounded">
+                                    <select name="" id="winningScore">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <button id="p1Button" class="is-primary button card-footer-item is-large"><span id="p1ButtonLabel">プレイヤー1</span></button>
+                            <button id="p2Button" class="is-info button card-footer-item is-large"><span id="p2ButtonLabel">プレイヤー2</span></button>
+                            <button id="reset" class="is-danger button card-footer-item is-large">リセット</button>
+                            <button id="resetNames" class="is-warning button card-footer-item is-large">名前リセット</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
